@@ -1,0 +1,11 @@
+.title {
+    height: 12rem;
+    background: gray;
+  }
+  
+  .h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 6rem;
+    color: white;
+  }
