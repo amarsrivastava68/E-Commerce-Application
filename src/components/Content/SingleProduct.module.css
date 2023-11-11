@@ -1,0 +1,61 @@
+a {
+    text-decoration: none;
+  }
+  
+  .product {
+    width: 300px;
+    display: flex;
+    background-color: rgb(128, 76, 25);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 15px; /* Added border-radius */
+    box-shadow: 0 4px 8px rgba(212, 58, 58, 0.2); /* Added box-shadow for a nice effect */
+    transition: transform 0.2s ease-in-out; /* Added transition for a smooth hover effect */
+  }
+  
+  .product:hover {
+    transform: scale(1.05); /* Slightly scale up on hover for an eye-catching effect */
+  }
+  
+  .details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .imgContainer {
+    overflow: hidden;
+    height: 15rem;
+    width: 15rem;
+    border-radius: 15px; /* Added border-radius */
+  }
+  
+  .imgContainer img {
+    display: block;
+    width: 100%;
+    transition: all 0.4s;
+  }
+  
+  .imgContainer img:hover {
+    filter: hue-rotate(180deg);
+  }
+  
+  .btn {
+    background-color: rgb(185, 87, 79);
+    padding: 0.5rem 1rem; /* Increased padding for a larger button */
+    font-size: 1rem; /* Increased font size */
+    color: black;
+    font-weight: bold;
+    align-items: right;
+    border-style: none;
+    border-radius: 15px; /* Added border-radius */
+    cursor: pointer; /* Added cursor style to indicate interactivity */
+    transition: background-color 0.2s ease-in-out; /* Added transition for button hover effect */
+  }
+  
+  .btn:hover {
+    background-color: rgb(215, 132, 124);
+  }
+  
