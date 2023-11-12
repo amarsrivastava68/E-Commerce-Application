@@ -46,12 +46,13 @@ const CartProvider = (props) => {
   const authCtx = useContext(AuthContext)
   const [items, setItems] = useState([])
   const [productsArr, setProductsArr] = useState(ProductsArr)
-  const url = `https://crudcrud.com/api/be933d90a0214690842289866dc3a78a/${authCtx.email}`
+  const url = `https://ecommerceproject-4cf8a-default-rtdb.firebaseio.com/${authCtx.email}.json`
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(url)
+        console.log(response.data)
         setItems(response.data)
       } catch (error) {
         console.log(error)
@@ -65,6 +66,7 @@ const CartProvider = (props) => {
     try {
       await axios.post(url, item)
       const response = await axios.get(url)
+      console.log(response.data)
       setItems(response.data)
     } catch (error) {
       console.log(error)
@@ -72,7 +74,7 @@ const CartProvider = (props) => {
   }
 
   const addItemToCartHandler = async (item) => {
-    const itemPresent = items.find((cartItem) => cartItem.title === item.title)
+    const itemPresent = (Object.values(obj).find((element) => element.title == item.title))
 
     if (itemPresent) {
       alert('This item is already added to the cart')
