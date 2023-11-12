@@ -7,7 +7,9 @@ const Cart = (props) => {
   // const [cartItems, setCartItems] = useState([...cartElements])
   const cartCtx = useContext(CartContext)
 
-  let total = cartCtx.items.reduce((acc, cur) => {
+  console.log('swr23' , Object.values(cartCtx.items))
+  let total = Object.values(cartCtx.items).reduce((acc, cur) => {
+    
     return (acc = acc + Number(cur.price) * Number(cur.quantity))
   }, 0)
 
@@ -22,7 +24,7 @@ const Cart = (props) => {
         <h3>PRICE</h3>
         <h3>QUANTITY</h3>
       </div>
-      {cartCtx.items.map((item) => {
+      {Object.values(cartCtx.items).map((item) => {
         <>
         <p>{item.id}</p>
         <p>{item.description}</p>

@@ -74,7 +74,7 @@ const CartProvider = (props) => {
   }
 
   const addItemToCartHandler = async (item) => {
-    const itemPresent = (Object.values(obj).find((element) => element.title == item.title))
+    const itemPresent = (Object.values(items).find((element) => element.title == item.title))
 
     if (itemPresent) {
       alert('This item is already added to the cart')
