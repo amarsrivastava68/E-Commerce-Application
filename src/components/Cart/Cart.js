@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-
+import CartItem from './CartItem'
 import classes from './Cart.module.css'
 import CartContext from '../../store/cart-context'
 
@@ -7,8 +7,8 @@ const Cart = (props) => {
   // const [cartItems, setCartItems] = useState([...cartElements])
   const cartCtx = useContext(CartContext)
 
-  console.log('swr23' , Object.values(cartCtx.items))
-  let total = Object.values(cartCtx.items).reduce((acc, cur) => {
+  
+  let total = cartCtx.items.reduce((acc, cur) => {
     
     return (acc = acc + Number(cur.price) * Number(cur.quantity))
   }, 0)
@@ -24,13 +24,8 @@ const Cart = (props) => {
         <h3>PRICE</h3>
         <h3>QUANTITY</h3>
       </div>
-      {Object.values(cartCtx.items).map((item) => {
-        <>
-        <p>{item.id}</p>
-        <p>{item.description}</p>
-        <p>{item.rating}</p>
-        </>
-      })}
+      {cartCtx.items.map((item) => {
+        return <CartItem key={item.id} item={item} /> })}
       <h4>Total : {total}</h4>
       <button className={classes.btn}>PURCHASE</button>
     </div>
