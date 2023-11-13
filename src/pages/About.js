@@ -1,7 +1,7 @@
 import React from 'react'
 import Title from '../components/Title/Title'
 import classes from './About.module.css'
-import img from '../assets/logo.jpeg'
+import img from '../assets/logo.jpg'
 
 const About = () => {
   return (
