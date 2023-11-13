@@ -38,7 +38,11 @@ h4 {
   margin-left: 2rem;
   cursor: pointer;
 }
+.logout {
 
+  background-color: red;
+  padding: 3%;
+}
 .btn {
   margin-right: 2rem;
   cursor: pointer;

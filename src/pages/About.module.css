@@ -1,0 +1,21 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .main {
+    display: flex;
+    width: 80%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+  .main img {
+    height: 15rem;
+    width: 30rem;
+    margin: 0.5rem;
+    border-radius: 50%;
+  }

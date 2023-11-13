@@ -1,0 +1,54 @@
+.home {
+    margin: 0 0 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .play {
+    margin: 0;
+    background: gray;
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .play p {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+    padding: 1rem;
+    border: 1px solid rgb(70, 168, 176);
+    margin: 0 0 1rem 0;
+  }
+  
+  .tourDetails {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
+  }
+  
+  .tourDetails p {
+    margin-right: 3rem;
+    font-weight: 500;
+  }
+  
+  .tourDetails button {
+    background-color: rgb(70, 168, 176);
+    padding: 0.3rem;
+    font-size: 0.8rem;
+    color: white;
+    font-weight: bold;
+    border-style: none;
+    border-radius: 5px;
+    margin-left: 8rem;
+  }
+  
+  .tourDetails button:hover {
+    background-color: rgb(40, 123, 131);
+  }
